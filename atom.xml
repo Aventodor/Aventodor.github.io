@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://polarstar.tech/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2019-01-29T12:32:34.620Z</updated>
-  <id>http://polarstar.tech/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://polarstar.tech/2019/02/01/hello-world/"/>
-    <id>http://polarstar.tech/2019/02/01/hello-world/</id>
+    <link href="http://yoursite.com/2019/02/01/hello-world/"/>
+    <id>http://yoursite.com/2019/02/01/hello-world/</id>
     <published>2019-02-01T08:05:25.764Z</published>
     <updated>2019-01-29T12:32:34.620Z</updated>
     
