@@ -6,26 +6,26 @@
     
 
     
-    <title>webpack4系列教程（一）：初识webpack | 葛鹏程|blog</title>
+    <title>webpack4系列教程（三）：自动生成项目中的HTML文件 | 葛鹏程|blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="">
     
-    <meta name="description" content="1. 什么是webpack先来看看官网对webpack的介绍 ：  本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。  简单来说webpack就是一个J">
+    <meta name="description" content="1. webpack中的CommonJS和ES Mudule 规范1.1 CommonJs规范CommonJs规范的出发点：JS没有模块系统、标准库较少、缺乏包管理工具；为了让JS可以在任何地方运行，以达到Java、PHP这些后台语言具备开发大型应用的能力。 在CommonJs规范中：  一个文件就是一个模块，拥有单独的作用域； 普通方式定义的变量、函数、对象都属于该模块内； 通过require来">
 <meta name="keywords" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack4系列教程（一）：初识webpack">
-<meta property="og:url" content="http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/index.html">
+<meta property="og:title" content="webpack4系列教程（三）：自动生成项目中的HTML文件">
+<meta property="og:url" content="http://aventador.top/2019/02/02/webpack4系列教程（三）：自动生成项目中的HTML文件/index.html">
 <meta property="og:site_name" content="葛鹏程|blog">
-<meta property="og:description" content="1. 什么是webpack先来看看官网对webpack的介绍 ：  本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。  简单来说webpack就是一个J">
+<meta property="og:description" content="1. webpack中的CommonJS和ES Mudule 规范1.1 CommonJs规范CommonJs规范的出发点：JS没有模块系统、标准库较少、缺乏包管理工具；为了让JS可以在任何地方运行，以达到Java、PHP这些后台语言具备开发大型应用的能力。 在CommonJs规范中：  一个文件就是一个模块，拥有单独的作用域； 普通方式定义的变量、函数、对象都属于该模块内； 通过require来">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-02-02T13:18:32.287Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2012934-7e8c6b23486d13a6.gif?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2019-02-02T13:21:15.049Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack4系列教程（一）：初识webpack">
-<meta name="twitter:description" content="1. 什么是webpack先来看看官网对webpack的介绍 ：  本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。  简单来说webpack就是一个J">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="webpack4系列教程（三）：自动生成项目中的HTML文件">
+<meta name="twitter:description" content="1. webpack中的CommonJS和ES Mudule 规范1.1 CommonJs规范CommonJs规范的出发点：JS没有模块系统、标准库较少、缺乏包管理工具；为了让JS可以在任何地方运行，以达到Java、PHP这些后台语言具备开发大型应用的能力。 在CommonJs规范中：  一个文件就是一个模块，拥有单独的作用域； 普通方式定义的变量、函数、对象都属于该模块内； 通过require来">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2012934-7e8c6b23486d13a6.gif?imageMogr2/auto-orient/strip">
     
 
     
@@ -139,14 +139,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-webpack4系列教程（一）：初识webpack" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-webpack4系列教程（三）：自动生成项目中的HTML文件" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        webpack4系列教程（一）：初识webpack
+        webpack4系列教程（三）：自动生成项目中的HTML文件
         </h1>
     
 
@@ -156,8 +156,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/02/02/webpack4系列教程（一）：初识webpack/" class="article-date">
-            <time datetime="2019-02-02T13:12:55.000Z" itemprop="datePublished">2019-02-02</time>
+        <a href="/2019/02/02/webpack4系列教程（三）：自动生成项目中的HTML文件/" class="article-date">
+            <time datetime="2019-02-02T13:20:44.000Z" itemprop="datePublished">2019-02-02</time>
         </a>
     </div>
 
@@ -168,39 +168,72 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="1-什么是webpack"><a href="#1-什么是webpack" class="headerlink" title="1. 什么是webpack"></a>1. 什么是webpack</h1><p>先来看看<a href="https://www.webpackjs.com/concepts/" target="_blank" rel="noopener">官网</a>对webpack的介绍 ：</p>
-<blockquote>
-<p>本质上，<em>webpack</em>是一个现代 JavaScript 应用程序的<em>静态模块打包器(module bundler)</em>。当 webpack 处理应用程序时，它会递归地构建一个<em>依赖关系图(dependency graph)</em>，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个<em>bundle</em>。</p>
-</blockquote>
-<p>简单来说webpack就是一个JavaScript的打包器，将各种模块（module）打包成资源文件；还可以通过 Code Spliting 来把代码分离到不同的 bundle 中，然后可以按需加载或并行加载这些文件；webpack 可以使用 loader 来预处理文件，这允许你打包除了JavaScript 之外的任何静态资源。</p>
-<p><a href="https://www.webpackjs.com/concepts/" target="_blank" rel="noopener">官网</a>首页很清晰的展示了webpack的主要功能：</p>
-<p>​</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>我们可以看到，一堆 modules 经过 webpack 打包处理成了各种静态资源。这就是 webpack</p>
-<h1 id="2-webpack核心概念"><a href="#2-webpack核心概念" class="headerlink" title="2. webpack核心概念"></a>2. webpack核心概念</h1><p>在开始学习 webpack 之前，你需要了解 webpack 的四个核心概念： </p>
+            <h1 id="1-webpack中的CommonJS和ES-Mudule-规范"><a href="#1-webpack中的CommonJS和ES-Mudule-规范" class="headerlink" title="1. webpack中的CommonJS和ES Mudule 规范"></a>1. webpack中的CommonJS和ES Mudule 规范</h1><h2 id="1-1-CommonJs规范"><a href="#1-1-CommonJs规范" class="headerlink" title="1.1 CommonJs规范"></a>1.1 CommonJs规范</h2><p>CommonJs规范的出发点：JS没有模块系统、标准库较少、缺乏包管理工具；为了让JS可以在任何地方运行，以达到Java、PHP这些后台语言具备开发大型应用的能力。</p>
+<p>在CommonJs规范中：</p>
 <ul>
-<li>入口（entry）</li>
-<li>出口（output）</li>
-<li>loader</li>
-<li>插件（plugins） </li>
+<li>一个文件就是一个模块，拥有单独的作用域；</li>
+<li>普通方式定义的变量、函数、对象都属于该模块内；</li>
+<li>通过require来加载模块；</li>
+<li>通过exports和modul.exports来暴露模块中的内容；</li>
 </ul>
-<h2 id="2-1-入口（entry）"><a href="#2-1-入口（entry）" class="headerlink" title="2.1 入口（entry）"></a>2.1 入口（entry）</h2><p>入口指示 webpack 应该使用哪个模块，来开始构建其内部依赖。进入入口后，webpack 会找出有哪些模块和库是与入口相依赖的。</p>
-<p>我们可以在webpack配置中配置entry属性，来设置一个或多个入口起点。以下是一个简单的entry配置：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: <span class="string">'path/to/your/entry/index.js'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = config</span><br></pre></td></tr></table></figure></p>
-<h2 id="2-2-出口（output）"><a href="#2-2-出口（output）" class="headerlink" title="2.2 出口（output）"></a>2.2 出口（output）</h2><p> 设置output是为了告诉webpack要在哪里输出其创建的bundle，并且可以对bundle命名。示例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: <span class="string">'path/to/your/entry/index.js'</span></span><br><span class="line">  &#125;，  </span><br><span class="line">  output: &#123;</span><br><span class="line">    filename:<span class="string">'[name].bundle.js'</span>,</span><br><span class="line">    path: path.join(__dirname,<span class="string">'./dist'</span>)  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = config</span><br></pre></td></tr></table></figure>
-<p>我们通过 output.filename 来设置输出bundle的文件名， output.path 来设置 bundle 的输出路径 </p>
-<blockquote>
-<p>path 是 nodeJs 中的核心模块，用来处理项目中的路径。</p>
-</blockquote>
-<h2 id="2-3-loader"><a href="#2-3-loader" class="headerlink" title="2.3 loader"></a>2.3 loader</h2><p>由于 webpack 只认识 JavaScript 代码，因此就需要借助其他方法来处理那些非 JavaScript 文件，如 css、image、font等。而 loader 可以将所有类型的文件处理成 webpack 能够识别的有效模块，然后再对其进行处理。</p>
-<h5 id="loader-中有两个重要属性："><a href="#loader-中有两个重要属性：" class="headerlink" title="loader 中有两个重要属性："></a>loader 中有两个重要属性：</h5><ol>
-<li>test属性，用于标识出应该被对应的 loader 进行转换的某个或某些文件，通常是一个正则表达式；</li>
-<li>use属性，表示进行转换时，应该使用哪个 loader；<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: <span class="string">'path/to/your/entry/index.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'[name].bundle.js'</span>,</span><br><span class="line">    path: path.join(__dirname, <span class="string">'./dist'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    loaders: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.ejs$/</span>,</span><br><span class="line">        use: [<span class="string">'ejs-loader'</span>]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = config</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>以上示例中loader的配置相当于告诉webpack在遇到 .ejs 的文件时，在打包之前先用 ejs-loader 装换一下。</p>
-<h2 id="2-4-插件（plugins）"><a href="#2-4-插件（plugins）" class="headerlink" title="2.4 插件（plugins）"></a>2.4 插件（plugins）</h2><p>loader 被用于转换某些类型的模块，而插件则可以用于执行范围更广的任务。想要使用一个插件，你只需要require()它，然后把它添加到plugins数组中。多数插件可以通过选项(option)自定义。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>) <span class="comment">// 通过 npm 安装</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: <span class="string">'path/to/your/entry/index.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'[name].bundle.js'</span>,</span><br><span class="line">    path: path.join(__dirname, <span class="string">'./dist'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    loaders: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.ejs$/</span>,</span><br><span class="line">        use: [<span class="string">'ejs-loader'</span>]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">      title: <span class="string">'webpack demo'</span>,</span><br><span class="line">      template: path.join(__dirname, <span class="string">'./index.html'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = config</span><br></pre></td></tr></table></figure></p>
-<p>HtmlWebpackPlugin 将为你生成一个 HTML5 文件， 其中包括使用script标签的 body 中的所有 webpack 包，webpack 提供提供了许多功能强大的插件，查阅<a href="https://www.webpackjs.com/plugins" target="_blank" rel="noopener">插件列表</a>获取更多插件的使用方法。</p>
+<h2 id="1-2-ES-Mudule-规范"><a href="#1-2-ES-Mudule-规范" class="headerlink" title="1.2 ES Mudule 规范"></a>1.2 ES Mudule 规范</h2><p>ES6在语言标准的层面上，实现了模块功能，基本特点如下：</p>
+<ul>
+<li>每一个模块只加载一次， 每一个JS只执行一次， 如果下次再去加载同目录下同文件，直接从内存中读取；</li>
+<li>每一个模块内声明的变量都是局部变量， 不会污染全局作用域；</li>
+<li>模块内部的变量或者函数可以通过export导出；</li>
+<li>一个模块可以导入别的模块；</li>
+</ul>
+<p>模块功能主要由两个命令构成：export和import；export命令用于规定模块的对外接口，import命令用于输入其他模块提供的功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// esm.js</span><br><span class="line">let firstName = &apos;Jack&apos;;</span><br><span class="line">let lastName = &apos;Wang&apos;;</span><br><span class="line"></span><br><span class="line">export &#123;firstName, lastName&#125;</span><br><span class="line"></span><br><span class="line">// export命令除了输出变量，还可以输出函数</span><br><span class="line">export function (a, b) &#123;</span><br><span class="line">  return a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-7e8c6b23486d13a6.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>使用export命令定义了模块的对外接口以后，其他 JS 文件就可以通过import命令加载这个模块，import命令接受一对大括号，里面指定要从其他模块导入的变量名，大括号里面的变量名，必须与被导入模块对外接口的名称相同。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// main.js</span><br><span class="line">import &#123;firstName, lastName&#125; from &apos;./esm&apos;;</span><br><span class="line"></span><br><span class="line">function say() &#123;</span><br><span class="line">  console.log(&apos;Hello , &apos; + firstName + &apos; &apos; + lastName)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-52c7796bbd37e56f.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<h2 id="1-3-使用"><a href="#1-3-使用" class="headerlink" title="1.3 使用"></a>1.3 使用</h2><p>现在，在src目录下新建 sum.js 和 minus.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// sum.js ES Mudule 规范</span><br><span class="line">// export default命令，为模块指定默认输出</span><br><span class="line">export default function (a, b) &#123;</span><br><span class="line">  return a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-af483dbef298f5fd.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// minus.js commonJS 规范</span><br><span class="line"></span><br><span class="line">module.exports = function (a, b) &#123;</span><br><span class="line">  return a - b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-4af3c2e670cf4290.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p> 修改 main.js </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import sum from &apos;./sum&apos;</span><br><span class="line">import minus from &apos;./minus&apos;</span><br><span class="line"></span><br><span class="line">console.log(&apos;sum(1, 2): &apos; + sum(1, 2))</span><br><span class="line">console.log(&apos;minus(5, 2): &apos; + minus(5, 2))</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-6dc4db91d2f8bf19.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>执行 npm run build 之后，打开 index.html，在控制台中可以看到输出的结果。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-ea811a00ef59c294.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-8beaa5029e435a83.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<h1 id="2-自动生成项目中的HTML文件"><a href="#2-自动生成项目中的HTML文件" class="headerlink" title="2. 自动生成项目中的HTML文件"></a>2. 自动生成项目中的HTML文件</h1><p>在<a href="https://blog.csdn.net/qq_38286992/article/details/85538205" target="_blank" rel="noopener">前文</a>中我们为了演示打包好的 main.bundle.js ，在根目录下创建了一个 index.html ，并引入main.bundle.js。而在实际项目中，我们可以通过 webpack 的一个插件：<a href="https://www.webpackjs.com/plugins/html-webpack-plugin/" target="_blank" rel="noopener">HtmlWebpackPlugin</a> 来自动生成HTML文件并引入我们打包好的JS和CSS文件。</p>
+<h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev html-webpack-plugin</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-1d9767cd9d4e3467.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p> 整理项目目录：</p>
+<p>在根目录创建config文件夹，把webpack.config.js移入config，并修改webpack.config.js：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;)</span><br><span class="line">const HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;)</span><br><span class="line"></span><br><span class="line">const config = &#123;</span><br><span class="line">  mode: &apos;none&apos;,</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: path.join(__dirname, &apos;../src/main.js&apos;)</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: &apos;[name].bundle.js&apos;,</span><br><span class="line">    path: path.join(__dirname, &apos;../dist&apos;)</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new HtmlWebpackPlugin(&#123;</span><br><span class="line">      template: path.join(__dirname, &apos;../index.html&apos;),</span><br><span class="line">      inject: true,</span><br><span class="line">      minify: &#123;</span><br><span class="line">        removeComments: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = config</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-05953bae234d8a19.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<ul>
+<li>template：模版文件的路径，这里使用根目录下的index.html文件；</li>
+<li>inject：设为 true 表示把JS文件注入到body结尾，CSS文件注入到head中；</li>
+<li>minify：removeComments: true 表示删除模版文件中的注释，minify还有很多配置可选请<a href="https://github.com/jantimon/html-webpack-plugin#minification" target="_blank" rel="noopener">自行参阅</a>；</li>
+</ul>
+<p>下一步注释掉index.html 中我们手动引入的 script ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;/&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;/&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- &lt;script src=&quot;dist/main.bundle.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-a7b707b7dd77631a.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>执行 npm run build ，可以看到，dist 目录下多了一个 index.html，这就是通过 <a href="https://www.webpackjs.com/plugins/html-webpack-plugin/" target="_blank" rel="noopener">HtmlWebpackPlugin </a>生成的文件，打开dist/index.html，已经自动引入了 main.bundle.js并且注释已被删除。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-85f88ef28d2e5c57?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-7a25248813e0df35.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>至此，我们已经成功实现自动生成项目中的HTML文件了。</p>
+<h1 id="3-清理-dist文件夹"><a href="#3-清理-dist文件夹" class="headerlink" title="3. 清理/dist文件夹"></a>3. 清理/dist文件夹</h1><p>每次执行npm run build 打包时，都会有上次的代码遗留下来，导致我们的 <code>/dist</code> 文件夹相当杂乱。通常，在每次构建前清理 <code>/dist</code> 文件夹，是比较推荐的做法。</p>
+<p><a href="https://www.npmjs.com/package/clean-webpack-plugin" target="_blank" rel="noopener"><code>clean-webpack-plugin</code></a> 是一个比较普及的管理插件，让我们安装和配置下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install clean-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-d0e67d3b2b5f260d.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>在webpack.config.js 中使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const CleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-b34f9e9bca564aba.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>在 plugins 中加入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new CleanWebpackPlugin([&apos;dist&apos;],&#123;root: path.join(__dirname, &apos;../&apos;)&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-2066640c0fbc2423.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>第一个参数表示文件夹路径数组；第二个参数是 options 配置项，root 为到webpack根文件夹的绝对路径，默认为 __dirname，由于dist文件夹和webpack.config.js不再相同目录下，因此我们需要重新定义 root 路径，以免无法找到 dist 文件夹。</p>
+<p>执行 npm run build ，在命令行中可见：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-1768f1081a850626.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-2044bf0d1b4ea8ec.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>dist 文件夹已被删除了。</p>
 
         </div>
         <footer class="article-footer">
@@ -208,7 +241,7 @@
 
 
 
-    <a data-url="http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/" data-id="cjrniilfp0004ucu3rmfknodk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://aventador.top/2019/02/02/webpack4系列教程（三）：自动生成项目中的HTML文件/" data-id="cjrniilfm0002ucu3usfw8ygm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -278,20 +311,21 @@
             "@type": "Person",
             "name": "葛鹏程"
         },
-        "headline": "webpack4系列教程（一）：初识webpack",
-        "image": "http://aventador.tophttp://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+        "headline": "webpack4系列教程（三）：自动生成项目中的HTML文件",
+        "image": "http://aventador.tophttps://upload-images.jianshu.io/upload_images/2012934-7e8c6b23486d13a6.gif?imageMogr2/auto-orient/strip",
         "keywords": "",
         "genre": "技术文章 webpack",
         "datePublished": "2019-02-02",
         "dateCreated": "2019-02-02",
         "dateModified": "2019-02-02",
-        "url": "http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/",
-        "description": "1. 什么是webpack先来看看官网对webpack的介绍 ：
+        "url": "http://aventador.top/2019/02/02/webpack4系列教程（三）：自动生成项目中的HTML文件/",
+        "description": "1. webpack中的CommonJS和ES Mudule 规范1.1 CommonJs规范CommonJs规范的出发点：JS没有模块系统、标准库较少、缺乏包管理工具；为了让JS可以在任何地方运行，以达到Java、PHP这些后台语言具备开发大型应用的能力。
+在CommonJs规范中：
 
-本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。
-
-简单来说webpack就是一个J"
-        "wordCount": 557
+一个文件就是一个模块，拥有单独的作用域；
+普通方式定义的变量、函数、对象都属于该模块内；
+通过require来"
+        "wordCount": 576
     }
 </script>
 
@@ -371,16 +405,22 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/02/02/webpack4系列教程（二）：创建项目，打包第一个JS文件/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2019/02/02/webpack4系列教程（四）：处理项目中的资源文件（一）/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            webpack4系列教程（二）：创建项目，打包第一个JS文件
+            webpack4系列教程（四）：处理项目中的资源文件（一）
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
+    
+        <a href="/2019/02/02/webpack4系列教程（二）：创建项目，打包第一个JS文件/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">webpack4系列教程（二）：创建项目，打包第一个JS文件</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -578,7 +618,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/';
+    var disqus_url = 'http://aventador.top/2019/02/02/webpack4系列教程（三）：自动生成项目中的HTML文件/';
     
     (function() {
     var dsq = document.createElement('script');

@@ -6,22 +6,26 @@
     
 
     
-    <title>about | 葛鹏程|blog</title>
+    <title>webpack4系列教程（五）：处理项目中的资源文件（二） | 葛鹏程|blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="关于我">
+        <meta name="keywords" content="">
+    
+    <meta name="description" content="1. 在项目中使用 less在 src/assets/ 下新建 common.less ： 1234body&amp;#123;  background: #fafafa;  padding: 20px;&amp;#125;   在 main.js 中引入 common.less ： 1import &amp;apos;./assets/style/common.less&amp;apos;   安装 less-loader：">
 <meta name="keywords" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://aventador.top/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack4系列教程（五）：处理项目中的资源文件（二）">
+<meta property="og:url" content="http://aventador.top/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/index.html">
 <meta property="og:site_name" content="葛鹏程|blog">
-<meta property="og:description" content="关于我">
+<meta property="og:description" content="1. 在项目中使用 less在 src/assets/ 下新建 common.less ： 1234body&amp;#123;  background: #fafafa;  padding: 20px;&amp;#125;   在 main.js 中引入 common.less ： 1import &amp;apos;./assets/style/common.less&amp;apos;   安装 less-loader：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-01T07:30:24.850Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2012934-9020ad076d645408.gif?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2019-02-02T13:23:32.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="关于我">
+<meta name="twitter:title" content="webpack4系列教程（五）：处理项目中的资源文件（二）">
+<meta name="twitter:description" content="1. 在项目中使用 less在 src/assets/ 下新建 common.less ： 1234body&amp;#123;  background: #fafafa;  padding: 20px;&amp;#125;   在 main.js 中引入 common.less ： 1import &amp;apos;./assets/style/common.less&amp;apos;   安装 less-loader：">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2012934-9020ad076d645408.gif?imageMogr2/auto-orient/strip">
     
 
     
@@ -130,35 +134,96 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/about/index.html">about</em>
+    <a class="page-title-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/技术文章/webpack/">webpack</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope="" itemprop="blogPost">
+                            <article id="post-webpack4系列教程（五）：处理项目中的资源文件（二）" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        about
+        webpack4系列教程（五）：处理项目中的资源文件（二）
         </h1>
     
 
             </header>
         
         
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/" class="article-date">
+            <time datetime="2019-02-02T13:23:03.000Z" itemprop="datePublished">2019-02-02</time>
+        </a>
+    </div>
+
+		
+
+                
+            </div>
+        
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3>
+            <h1 id="1-在项目中使用-less"><a href="#1-在项目中使用-less" class="headerlink" title="1. 在项目中使用 less"></a>1. 在项目中使用 less</h1><p>在 src/assets/ 下新建 common.less ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">  background: #fafafa;</span><br><span class="line">  padding: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-9020ad076d645408.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>在 main.js 中引入 common.less ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &apos;./assets/style/common.less&apos;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-07a809ec681f5cb9.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>安装 less-loader：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i less-loader -D</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-0d4314118bfca19e.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>添加 rules：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   test: /\.less$/,</span><br><span class="line">   use: [</span><br><span class="line">     &apos;style-loader&apos;,</span><br><span class="line">     &apos;css-loader&apos;,</span><br><span class="line">     &apos;less-loader&apos;</span><br><span class="line">   ]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-d88bf39ae95cfa8b.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>打包之后，在浏览器打开 dist/index.html，less文件中的样式已经通过 style 标签载入了：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-194b94439848478d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-e768c5d87d3c8956.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<h1 id="2-使用MiniCssExtractPlugin"><a href="#2-使用MiniCssExtractPlugin" class="headerlink" title="2. 使用MiniCssExtractPlugin"></a>2. 使用MiniCssExtractPlugin</h1><p>我们之前的样式代码都是通过 style 标签载入的，那么如何通过 link 引入CSS文件的方式实现呢？</p>
+<p>这就需要使用一个插件，在webpack3中通常使用ExtractTextWebpackPlugin，但是在webpack4中已经不再支持ExtractTextWebpackPlugin的正式版，而测试版本又不够稳定，因此我们使用MiniCssExtractPlugin替代。首先安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev mini-css-extract-plugin</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-e9104b2ec3972890.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>在webpack.config.js 中引入并添加 plugins ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const MiniCssExtractPlugin = require(&apos;mini-css-extract-plugin&apos;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-ed26cea1f923a356.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new MiniCssExtractPlugin(&#123;</span><br><span class="line">      filename: &quot;[name].css&quot;</span><br><span class="line">    &#125;),</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-47f6a946b4f69719.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p> 修改 CSS 和 less 的 rules：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">        test: /.css$/,</span><br><span class="line">        use: [</span><br><span class="line">          // &apos;style-loader&apos;,</span><br><span class="line">          &#123;</span><br><span class="line">            loader: MiniCssExtractPlugin.loader</span><br><span class="line">          &#125;,</span><br><span class="line">          &apos;css-loader&apos;</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        test: /.less$/,</span><br><span class="line">        use: [</span><br><span class="line">          // &apos;style-loader&apos;,</span><br><span class="line">          &#123;</span><br><span class="line">            loader: MiniCssExtractPlugin.loader</span><br><span class="line">          &#125;,</span><br><span class="line">          &apos;css-loader&apos;,</span><br><span class="line">          &apos;less-loader&apos;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-c7668816d7cd9001.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>npm run build 之后，可见head中引入了一个 main.css 文件：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-ed039ee7ee623a49.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-a3b25b2ed841fce2.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>也正是我们在 common.less 和 modal.css 中的代码</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-42b68e2aabc38723?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-48284d76011eaa5c.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<h1 id="3-postcss-loader"><a href="#3-postcss-loader" class="headerlink" title="3. postcss-loader"></a>3. postcss-loader</h1><p>postcss-loader 可以帮助我们处理CSS，如自动添加浏览器前缀。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D postcss-loader autoprefixer</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-07342baa1a4454e3.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>在根目录下创建 postcss.config.js：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const autoprefixer = require(&apos;autoprefixer&apos;)</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    autoprefixer(&#123;</span><br><span class="line">      browsers: [&apos;last 5 version&apos;]</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-ee6337518867253b.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>修改 css 和 less 的 rules：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">        test: /\.css$/,</span><br><span class="line">        use: [</span><br><span class="line">          // &apos;style-loader&apos;,</span><br><span class="line">          &#123;</span><br><span class="line">            loader: MiniCssExtractPlugin.loader</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123; loader: &apos;css-loader&apos;, options: &#123; importLoaders: 1 &#125; &#125;,</span><br><span class="line">          &apos;postcss-loader&apos;</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.less$/,</span><br><span class="line">        use: [</span><br><span class="line">          // &apos;style-loader&apos;,</span><br><span class="line">          &#123;</span><br><span class="line">            loader: MiniCssExtractPlugin.loader</span><br><span class="line">          &#125;,</span><br><span class="line">          &apos;css-loader&apos;,</span><br><span class="line">          &apos;postcss-loader&apos;,</span><br><span class="line">          &apos;less-loader&apos;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-e469db73dc41d618.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>在 modal.css中加入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.flex&#123;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-afb154591decd67b.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>打包之后打开 main.css，可见浏览器前缀已经加上了：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-041d73e7df49eb94.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-d9572fa1ae4660f1.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://aventador.top/about/index.html" data-id="cjrniilfk0001ucu3pwh0jsog" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://aventador.top/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/" data-id="cjrniilfr0006ucu31l8qt5pa" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -228,16 +293,23 @@
             "@type": "Person",
             "name": "葛鹏程"
         },
-        "headline": "about",
-        "image": "http://aventador.top",
-        
-        
-        "datePublished": "2019-02-01",
-        "dateCreated": "2019-02-01",
-        "dateModified": "2019-02-01",
-        "url": "http://aventador.top/about/index.html",
-        "description": "关于我"
-        "wordCount": 5
+        "headline": "webpack4系列教程（五）：处理项目中的资源文件（二）",
+        "image": "http://aventador.tophttps://upload-images.jianshu.io/upload_images/2012934-9020ad076d645408.gif?imageMogr2/auto-orient/strip",
+        "keywords": "",
+        "genre": "技术文章 webpack",
+        "datePublished": "2019-02-02",
+        "dateCreated": "2019-02-02",
+        "dateModified": "2019-02-02",
+        "url": "http://aventador.top/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/",
+        "description": "1. 在项目中使用 less在 src/assets/ 下新建 common.less ：
+1234body&#123;  background: #fafafa;  padding: 20px;&#125;
+ 
+在 main.js 中引入 common.less ：
+1import &apos;./assets/style/common.less&apos;
+ 
+安装 less-loader：
+"
+        "wordCount": 816
     }
 </script>
 
@@ -313,6 +385,29 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/02/02/webpack4系列教程（六）：使用SplitChunksPlugin分割代码/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            webpack4系列教程（六）：使用SplitChunksPlugin分割代码
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/02/02/webpack4系列教程（四）：处理项目中的资源文件（一）/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">webpack4系列教程（四）：处理项目中的资源文件（一）</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -507,7 +602,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://aventador.top/about/index.html';
+    var disqus_url = 'http://aventador.top/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/';
     
     (function() {
     var dsq = document.createElement('script');

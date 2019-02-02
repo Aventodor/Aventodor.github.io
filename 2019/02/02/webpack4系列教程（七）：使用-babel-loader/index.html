@@ -6,22 +6,26 @@
     
 
     
-    <title>about | 葛鹏程|blog</title>
+    <title>webpack4系列教程（七）：使用 babel-loader | 葛鹏程|blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="关于我">
+        <meta name="keywords" content="">
+    
+    <meta name="description" content="1. 什么是Babel如今 ES6 语法在开发中已经非常普及，甚至也有许多开发人员用上了 ES7 或 ES8 语法。然而，浏览器对这些高级语法的支持性并不是非常好。因此为了让我们的新语法能在浏览器中都能顺利运行，Babel 应运而生。Babel是一个JavaScript编译器，能够让我们放心的使用新一代JS语法。比如我们的箭头函数：1() =&amp;gt; console.log(&apos;hello babe">
 <meta name="keywords" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://aventador.top/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack4系列教程（七）：使用 babel-loader">
+<meta property="og:url" content="http://aventador.top/2019/02/02/webpack4系列教程（七）：使用-babel-loader/index.html">
 <meta property="og:site_name" content="葛鹏程|blog">
-<meta property="og:description" content="关于我">
+<meta property="og:description" content="1. 什么是Babel如今 ES6 语法在开发中已经非常普及，甚至也有许多开发人员用上了 ES7 或 ES8 语法。然而，浏览器对这些高级语法的支持性并不是非常好。因此为了让我们的新语法能在浏览器中都能顺利运行，Babel 应运而生。Babel是一个JavaScript编译器，能够让我们放心的使用新一代JS语法。比如我们的箭头函数：1() =&amp;gt; console.log(&apos;hello babe">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-01T07:30:24.850Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2012934-f737bd10225bc684?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-02-02T13:25:01.444Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="关于我">
+<meta name="twitter:title" content="webpack4系列教程（七）：使用 babel-loader">
+<meta name="twitter:description" content="1. 什么是Babel如今 ES6 语法在开发中已经非常普及，甚至也有许多开发人员用上了 ES7 或 ES8 语法。然而，浏览器对这些高级语法的支持性并不是非常好。因此为了让我们的新语法能在浏览器中都能顺利运行，Babel 应运而生。Babel是一个JavaScript编译器，能够让我们放心的使用新一代JS语法。比如我们的箭头函数：1() =&amp;gt; console.log(&apos;hello babe">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2012934-f737bd10225bc684?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
 
     
@@ -130,35 +134,64 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/about/index.html">about</em>
+    <a class="page-title-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/技术文章/webpack/">webpack</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope="" itemprop="blogPost">
+                            <article id="post-webpack4系列教程（七）：使用-babel-loader" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        about
+        webpack4系列教程（七）：使用 babel-loader
         </h1>
     
 
             </header>
         
         
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/02/02/webpack4系列教程（七）：使用-babel-loader/" class="article-date">
+            <time datetime="2019-02-02T13:24:32.000Z" itemprop="datePublished">2019-02-02</time>
+        </a>
+    </div>
+
+		
+
+                
+            </div>
+        
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3>
+            <h1 id="1-什么是Babel"><a href="#1-什么是Babel" class="headerlink" title="1. 什么是Babel"></a>1. 什么是Babel</h1><p>如今 ES6 语法在开发中已经非常普及，甚至也有许多开发人员用上了 ES7 或 ES8 语法。然而，浏览器对这些高级语法的支持性并不是非常好。因此为了让我们的新语法能在浏览器中都能顺利运行，Babel 应运而生。<br>Babel是一个JavaScript编译器，能够让我们放心的使用新一代JS语法。比如我们的箭头函数：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">() =&gt; <span class="built_in">console</span>.log(<span class="string">'hello babel'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>经过Babel编译之后：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'hello babel'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>会编译成浏览器可识别的ES5语法。</p>
+<h1 id="2-在webpack中使用babel-loader"><a href="#2-在webpack中使用babel-loader" class="headerlink" title="2. 在webpack中使用babel-loader"></a>2. 在webpack中使用babel-loader</h1><p>安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D babel-loader @babel/core @babel/preset-env webpack</span><br></pre></td></tr></table></figure></p>
+<p>修改 webpack.config.js，加入新的loader：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">    loader: <span class="string">'babel-loader'</span>,</span><br><span class="line">    exclude: <span class="regexp">/node_modules/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>遇到JS文件就先用babel-loader处理，exclude表示排除 node_modules 文件夹中的文件。loader的配置就OK了，可是这样还不能发挥Babel的作用。在项目根目录下创建一个 .babelrc 文件，添加代码：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"presets"</span>: [</span><br><span class="line">    <span class="string">"@babel/preset-env"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们还希望能够在项目对一些组件进行懒加载，所以还需要一个Babel插件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i babel-plugin-syntax-dynamic-import -D</span><br></pre></td></tr></table></figure></p>
+<p>在 .babelrc 文件中加入plugins配置：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"presets"</span>: [</span><br><span class="line">    <span class="string">"@babel/preset-env"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"plugins"</span>: [</span><br><span class="line">    <span class="string">"syntax-dynamic-import"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在src 目录下创建 helper.js：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'this is helper'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>再来修改我们的 main.js ：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'babel-polyfill'</span></span><br><span class="line"><span class="keyword">import</span> Modal <span class="keyword">from</span> <span class="string">'./components/modal/modal'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'./assets/style/common.less'</span></span><br><span class="line"><span class="keyword">import</span> _ <span class="keyword">from</span> <span class="string">'lodash'</span></span><br><span class="line"><span class="keyword">const</span> App = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> div = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>)</span><br><span class="line">  div.setAttribute(<span class="string">'id'</span>, <span class="string">'app'</span>)</span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(div)</span><br><span class="line">  <span class="keyword">let</span> dom = <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>)</span><br><span class="line">  <span class="keyword">let</span> modal = <span class="keyword">new</span> Modal()</span><br><span class="line">  dom.innerHTML = modal.template(&#123;</span><br><span class="line">    title: <span class="string">'标题'</span>,</span><br><span class="line">    content: <span class="string">'内容'</span>,</span><br><span class="line">    footer: <span class="string">'底部'</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">let</span> button = <span class="built_in">document</span>.createElement(<span class="string">'button'</span>)</span><br><span class="line">  button.innerText = <span class="string">'click me'</span></span><br><span class="line">  button.onclick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> help = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./helper'</span>)</span><br><span class="line">    help()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(button)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> App()</span><br><span class="line"><span class="built_in">console</span>.log(_.camelCase(<span class="string">'Foo Bar'</span>))</span><br></pre></td></tr></table></figure></p>
+<p>当button点击时，加载 helper 然后调用。打包之后可见：<br><img src="http://upload-images.jianshu.io/upload_images/2012934-f737bd10225bc684?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="在这里插入图片描述"><br>多了一个 3.bundle.js，在浏览器打开 dist/index.html ，打开 network查看，3.bundle.js并未加载：<br><img src="http://upload-images.jianshu.io/upload_images/2012934-27a396aa4f6c7597.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="在这里插入图片描述"><br>当点击button之后，发现浏览器请求了3.bundle.js，控制台也打印出了数据。<br><img src="http://upload-images.jianshu.io/upload_images/2012934-729e9ff02dba24c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="在这里插入图片描述"><br><img src="http://upload-images.jianshu.io/upload_images/2012934-aa9a359aa1e18ee1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>由于 Babel 只转换语法(如箭头函数)， 你可以使用 babel-polyfill 支持新的全局变量，例如 Promise 、新的原生方法如 String.padStart (left-pad) 等。</p>
+</blockquote>
+<p>安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev babel-polyfill</span><br></pre></td></tr></table></figure></p>
+<p>在入口文件引入就可以了：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'babel-polyfill'</span></span><br></pre></td></tr></table></figure></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://aventador.top/about/index.html" data-id="cjrniilfk0001ucu3pwh0jsog" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://aventador.top/2019/02/02/webpack4系列教程（七）：使用-babel-loader/" data-id="cjrniilfg0000ucu3qi98kqaz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -228,16 +261,16 @@
             "@type": "Person",
             "name": "葛鹏程"
         },
-        "headline": "about",
-        "image": "http://aventador.top",
-        
-        
-        "datePublished": "2019-02-01",
-        "dateCreated": "2019-02-01",
-        "dateModified": "2019-02-01",
-        "url": "http://aventador.top/about/index.html",
-        "description": "关于我"
-        "wordCount": 5
+        "headline": "webpack4系列教程（七）：使用 babel-loader",
+        "image": "http://aventador.tophttp://upload-images.jianshu.io/upload_images/2012934-f737bd10225bc684?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+        "keywords": "",
+        "genre": "技术文章 webpack",
+        "datePublished": "2019-02-02",
+        "dateCreated": "2019-02-02",
+        "dateModified": "2019-02-02",
+        "url": "http://aventador.top/2019/02/02/webpack4系列教程（七）：使用-babel-loader/",
+        "description": "1. 什么是Babel如今 ES6 语法在开发中已经非常普及，甚至也有许多开发人员用上了 ES7 或 ES8 语法。然而，浏览器对这些高级语法的支持性并不是非常好。因此为了让我们的新语法能在浏览器中都能顺利运行，Babel 应运而生。Babel是一个JavaScript编译器，能够让我们放心的使用新一代JS语法。比如我们的箭头函数：1() =&gt; console.log('hello babe"
+        "wordCount": 419
     }
 </script>
 
@@ -313,6 +346,29 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/02/02/webpack4系列教程（八）：使用Eslint审查代码/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            webpack4系列教程（八）：使用Eslint审查代码
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/02/02/webpack4系列教程（六）：使用SplitChunksPlugin分割代码/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">webpack4系列教程（六）：使用SplitChunksPlugin分割代码</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -507,7 +563,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://aventador.top/about/index.html';
+    var disqus_url = 'http://aventador.top/2019/02/02/webpack4系列教程（七）：使用-babel-loader/';
     
     (function() {
     var dsq = document.createElement('script');

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>webpack4系列教程（四）：处理项目中的资源文件（一） | 葛鹏程|blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="">
+    
+    <meta name="description" content="1. Loader的使用之前的博文已经介绍了Loader的概念以及用法，webpack 可以使用 loader 来预处理文件，这允许你打包除 JavaScript 之外的任何静态资源， 甚至允许你直接在 JavaScript 模块中 import CSS文件。 在 src 目录下新建 components 文件夹，新建 modal 组件：   ​ 编写代码： 12345678910111213&amp;l">
+<meta name="keywords" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack4系列教程（四）：处理项目中的资源文件（一）">
+<meta property="og:url" content="http://aventador.top/2019/02/02/webpack4系列教程（四）：处理项目中的资源文件（一）/index.html">
+<meta property="og:site_name" content="葛鹏程|blog">
+<meta property="og:description" content="1. Loader的使用之前的博文已经介绍了Loader的概念以及用法，webpack 可以使用 loader 来预处理文件，这允许你打包除 JavaScript 之外的任何静态资源， 甚至允许你直接在 JavaScript 模块中 import CSS文件。 在 src 目录下新建 components 文件夹，新建 modal 组件：   ​ 编写代码： 12345678910111213&amp;l">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2012934-519e7c14df6655c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-02-02T13:22:45.809Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webpack4系列教程（四）：处理项目中的资源文件（一）">
+<meta name="twitter:description" content="1. Loader的使用之前的博文已经介绍了Loader的概念以及用法，webpack 可以使用 loader 来预处理文件，这允许你打包除 JavaScript 之外的任何静态资源， 甚至允许你直接在 JavaScript 模块中 import CSS文件。 在 src 目录下新建 components 文件夹，新建 modal 组件：   ​ 编写代码： 12345678910111213&amp;l">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2012934-519e7c14df6655c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="葛鹏程|blog" type="application/atom+xml">
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术文章/">技术文章</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术文章/webpack/">webpack</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/技术文章/webpack/">webpack</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-webpack4系列教程（四）：处理项目中的资源文件（一）" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        webpack4系列教程（四）：处理项目中的资源文件（一）
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/02/02/webpack4系列教程（四）：处理项目中的资源文件（一）/" class="article-date">
+            <time datetime="2019-02-02T13:22:17.000Z" itemprop="datePublished">2019-02-02</time>
+        </a>
+    </div>
+
+		
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="1-Loader的使用"><a href="#1-Loader的使用" class="headerlink" title="1. Loader的使用"></a>1. Loader的使用</h1><p><a href="https://blog.csdn.net/qq_38286992/article/details/85338683" target="_blank" rel="noopener">之前的博文</a>已经介绍了Loader的概念以及用法，webpack 可以使用 loader 来预处理文件，这允许你打包除 JavaScript 之外的任何静态资源， 甚至允许你直接在 JavaScript 模块中 import CSS文件。</p>
+<p>在 src 目录下新建 components 文件夹，新建 modal 组件：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-519e7c14df6655c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-5b27f3099c13faa6.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>编写代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--modal.ejs--&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;modal-parent&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;modal-header&quot;&gt;</span><br><span class="line">        &lt;h3 class=&quot;modal-title&quot;&gt;&lt;%= title %&gt;&lt;/h3&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;modal-body&quot;&gt;</span><br><span class="line">        &lt;%= content %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;modal-footer&quot;&gt;</span><br><span class="line">        &lt;%= footer %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-21882e8c39fcfc4d.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// modal.js</span><br><span class="line">import template from &apos;./modal.ejs&apos;</span><br><span class="line"></span><br><span class="line">export default function modal () &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    name: &apos;modal&apos;,</span><br><span class="line">    template: template</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-7deee7ae59236b4b.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>修改 main.js：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import Modal from &apos;./components/modal/modal&apos;</span><br><span class="line"></span><br><span class="line">const App = function () &#123;</span><br><span class="line">  let div = document.createElement(&apos;div&apos;)</span><br><span class="line">  div.setAttribute(&apos;id&apos;, &apos;app&apos;)</span><br><span class="line">  document.body.appendChild(div)</span><br><span class="line">  let dom = document.getElementById(&apos;app&apos;)</span><br><span class="line">  let modal = new Modal()</span><br><span class="line">  dom.innerHTML = modal.template(&#123;</span><br><span class="line">    title: &apos;标题&apos;,</span><br><span class="line">    content: &apos;内容&apos;,</span><br><span class="line">    footer: &apos;底部&apos;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const app = new App()</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-c765f0ad8ffd4ec2.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p> 此时执行 npm run build 会报错 ：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-59e57465f2c46875?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-f677b69e94d53924.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>webpack 无法解析 .ejs 文件，因此我们需要安装对应的 loader：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i ejs-loader -D</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-6dbbd4c3aea8867a.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p> 并修改 webpack.config.js 添加 module 属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /.ejs$/,</span><br><span class="line">        use: [&apos;ejs-loader&apos;]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-aa746c996285e14c.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>再次执行 npm run build 就不会报错了，打开 dist/index.html ：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-567926279c5baea4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-45a3491ae667b44c.gif?imageMogr2/auto-orient/strip" alt=""> ​<img src="http://upload-images.jianshu.io/upload_images/2012934-827ba9621c46439f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-472481b12e4a4d5a.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>可以看到我们的 modal 组件已经成功渲染出来了。 </p>
+<h1 id="2-处理项目中的CSS文件"><a href="#2-处理项目中的CSS文件" class="headerlink" title="2. 处理项目中的CSS文件"></a>2. 处理项目中的CSS文件</h1><p>在 modal.css 中加入样式代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">.modal-parent&#123;</span><br><span class="line">    width: 500px;</span><br><span class="line">    height: auto;</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.modal-title&#123;</span><br><span class="line">    font-size: 20px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    padding: 10px;</span><br><span class="line">    margin: 0;</span><br><span class="line">&#125;</span><br><span class="line">.modal-body&#123;</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">    border-left: 0;</span><br><span class="line">    border-right: 0;</span><br><span class="line">    padding: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.modal-footer&#123;</span><br><span class="line">    padding: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-5c7fa85be717e91e.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>安装 css-loader 和 style-loader：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i css-loader style-loader -D</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-e69ae0adafcad013.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p> 修改webpack.config.js 中的 module.rules ，添加css-loader 和 style-loader：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /.ejs$/,</span><br><span class="line">        use: [&apos;ejs-loader&apos;]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        test: /.css$/,</span><br><span class="line">        use: [</span><br><span class="line">          &apos;style-loader&apos;,</span><br><span class="line">          &apos;css-loader&apos;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-fcc1037cd471ec32.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>在 modal.js 中引入 modal.css：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &apos;./modal.css&apos;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-2b409dc4be0e787d.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>再次执行 npm run build ，打开 dist/index.html：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-b76254f3310ea349?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-6c04f88bc3146574.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>CSS样式已经通过 style 标签添加到页面上了；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-789f0b03d296061d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-bf866058d3ee356b.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<h2 id="3-处理项目中的图片"><a href="#3-处理项目中的图片" class="headerlink" title="3. 处理项目中的图片"></a>3. 处理项目中的图片</h2><p>在src目录下创建 assets/img ，放入两张图片</p>
+<p> <img src="http://upload-images.jianshu.io/upload_images/2012934-138ce04ee955bb05.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-5f91b28d679beb14.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>给 modal 添加一个背景图的样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.modal-body&#123;</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">    border-left: 0;</span><br><span class="line">    border-right: 0;</span><br><span class="line">    padding: 10px;</span><br><span class="line">    background: url(&quot;../../assets/img/bg.jpg&quot;);</span><br><span class="line">    color: #fff;</span><br><span class="line">    height: 500px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-4712455d71166e5e.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>由于webpack无法处理图片资源，所以也要安装对应的 loader</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev url-loader file-loader</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-33f68e843f1db39c.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>在 webpack.config.js 中添加 loader </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /.ejs$/,</span><br><span class="line">        use: [&apos;ejs-loader&apos;]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        test: /.css$/,</span><br><span class="line">        use: [</span><br><span class="line">          &apos;style-loader&apos;,</span><br><span class="line">          &apos;css-loader&apos;</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        test: /.(jpg|jpeg|png|gif|svg)$/,</span><br><span class="line">        use: &apos;url-loader&apos;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-33abaf8a87b28916.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>打包代码之后，在浏览器打开 dist/index.html ，可见图片已经显示出来了：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-15bd44cc1d30757a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-88c8c9782c1b9c3a.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>仔细查看这张图片可以发现，它是通过 DataURL 加载出来的：<img src="http://upload-images.jianshu.io/upload_images/2012934-ea792a00898e338c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-17c9cacd8903e199.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+<p>下面更改 url-loader 的配置，limit表示在文件大小低于指定值时，返回一个DataURL</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">        test: /.(jpg|jpeg|png|gif|svg)$/,</span><br><span class="line">        use:  [</span><br><span class="line">          &#123;</span><br><span class="line">            loader: &apos;url-loader&apos;,</span><br><span class="line">            options: &#123;</span><br><span class="line">              name: &apos;[name]-[hash:5].[ext]&apos;,</span><br><span class="line">              limit: 1024</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-d29b17c175109b22.gif?imageMogr2/auto-orient/strip" alt=""> </p>
+<p>再次打包后，图片会以文件形式展示出来：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-d11259cc4a15361f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2012934-71c6bc549e8903ce.gif?imageMogr2/auto-orient/strip" alt=""> ​</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://aventador.top/2019/02/02/webpack4系列教程（四）：处理项目中的资源文件（一）/" data-id="cjrniilfw000bucu3qterbok0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "葛鹏程"
+        },
+        "headline": "webpack4系列教程（四）：处理项目中的资源文件（一）",
+        "image": "http://aventador.tophttp://upload-images.jianshu.io/upload_images/2012934-519e7c14df6655c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+        "keywords": "",
+        "genre": "技术文章 webpack",
+        "datePublished": "2019-02-02",
+        "dateCreated": "2019-02-02",
+        "dateModified": "2019-02-02",
+        "url": "http://aventador.top/2019/02/02/webpack4系列教程（四）：处理项目中的资源文件（一）/",
+        "description": "1. Loader的使用之前的博文已经介绍了Loader的概念以及用法，webpack 可以使用 loader 来预处理文件，这允许你打包除 JavaScript 之外的任何静态资源， 甚至允许你直接在 JavaScript 模块中 import CSS文件。
+在 src 目录下新建 components 文件夹，新建 modal 组件：
+
+ ​
+编写代码：
+12345678910111213&l"
+        "wordCount": 1130
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            webpack4系列教程（五）：处理项目中的资源文件（二）
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/02/02/webpack4系列教程（三）：自动生成项目中的HTML文件/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">webpack4系列教程（三）：自动生成项目中的HTML文件</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/02/02/webpack4系列教程（九）：开发环境和生产环境/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-2964c9a355cbd06d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（九）：开发环境和生产环境" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术文章/webpack/">webpack</a></p>
+                            <p class="item-title"><a href="/2019/02/02/webpack4系列教程（九）：开发环境和生产环境/" class="title">webpack4系列教程（九）：开发环境和生产环境</a></p>
+                            <p class="item-date"><time datetime="2019-02-02T13:26:25.000Z" itemprop="datePublished">2019-02-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/02/02/webpack4系列教程（八）：使用Eslint审查代码/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-05a52d6709117b78?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（八）：使用Eslint审查代码" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术文章/webpack/">webpack</a></p>
+                            <p class="item-title"><a href="/2019/02/02/webpack4系列教程（八）：使用Eslint审查代码/" class="title">webpack4系列教程（八）：使用Eslint审查代码</a></p>
+                            <p class="item-date"><time datetime="2019-02-02T13:25:18.000Z" itemprop="datePublished">2019-02-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/02/02/webpack4系列教程（七）：使用-babel-loader/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-f737bd10225bc684?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（七）：使用 babel-loader" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术文章/webpack/">webpack</a></p>
+                            <p class="item-title"><a href="/2019/02/02/webpack4系列教程（七）：使用-babel-loader/" class="title">webpack4系列教程（七）：使用 babel-loader</a></p>
+                            <p class="item-date"><time datetime="2019-02-02T13:24:32.000Z" itemprop="datePublished">2019-02-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/02/02/webpack4系列教程（六）：使用SplitChunksPlugin分割代码/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-8808e64f84a39ee5.gif?imageMogr2/auto-orient/strip)" alt="webpack4系列教程（六）：使用SplitChunksPlugin分割代码" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术文章/webpack/">webpack</a></p>
+                            <p class="item-title"><a href="/2019/02/02/webpack4系列教程（六）：使用SplitChunksPlugin分割代码/" class="title">webpack4系列教程（六）：使用SplitChunksPlugin分割代码</a></p>
+                            <p class="item-date"><time datetime="2019-02-02T13:23:50.000Z" itemprop="datePublished">2019-02-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-9020ad076d645408.gif?imageMogr2/auto-orient/strip)" alt="webpack4系列教程（五）：处理项目中的资源文件（二）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术文章/webpack/">webpack</a></p>
+                            <p class="item-title"><a href="/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/" class="title">webpack4系列教程（五）：处理项目中的资源文件（二）</a></p>
+                            <p class="item-date"><time datetime="2019-02-02T13:23:03.000Z" itemprop="datePublished">2019-02-02</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术文章/">技术文章</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术文章/webpack/">webpack</a><span class="category-list-count">9</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 葛鹏程</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://aventador.top/2019/02/02/webpack4系列教程（四）：处理项目中的资源文件（一）/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
