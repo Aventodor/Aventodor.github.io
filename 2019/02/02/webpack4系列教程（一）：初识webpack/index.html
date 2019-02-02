@@ -6,24 +6,26 @@
     
 
     
-    <title>Hello World | 葛鹏程|blog</title>
+    <title>webpack4系列教程（一）：初识webpack | 葛鹏程|blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="1. 什么是webpack先来看看官网对webpack的介绍 ：  本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。  简单来说webpack就是一个J">
 <meta name="keywords" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://aventador.top/2019/02/02/hello-world/index.html">
+<meta property="og:title" content="webpack4系列教程（一）：初识webpack">
+<meta property="og:url" content="http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/index.html">
 <meta property="og:site_name" content="葛鹏程|blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="1. 什么是webpack先来看看官网对webpack的介绍 ：  本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。  简单来说webpack就是一个J">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-02T13:08:45.264Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-02-02T13:15:33.385Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="webpack4系列教程（一）：初识webpack">
+<meta name="twitter:description" content="1. 什么是webpack先来看看官网对webpack的介绍 ：  本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。  简单来说webpack就是一个J">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
 
     
@@ -132,19 +134,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/1/">1</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/1/2/">2</a>
+    <a class="page-title-link" href="/categories/技术文章/">技术文章</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/技术文章/webpack/">webpack</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-hello-world" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-webpack4系列教程（一）：初识webpack" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Hello World
+        webpack4系列教程（一）：初识webpack
         </h1>
     
 
@@ -154,8 +156,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/02/02/hello-world/" class="article-date">
-            <time datetime="2019-02-02T13:08:45.263Z" itemprop="datePublished">2019-02-02</time>
+        <a href="/2019/02/02/webpack4系列教程（一）：初识webpack/" class="article-date">
+            <time datetime="2019-02-02T13:12:55.000Z" itemprop="datePublished">2019-02-02</time>
         </a>
     </div>
 
@@ -166,15 +168,42 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="1-什么是webpack"><a href="#1-什么是webpack" class="headerlink" title="1. 什么是webpack"></a>1. 什么是webpack</h1><p>先来看看<a href="https://www.webpackjs.com/concepts/" target="_blank" rel="noopener">官网</a>对webpack的介绍 ：</p>
+<blockquote>
+<p>本质上，<em>webpack</em>是一个现代 JavaScript 应用程序的<em>静态模块打包器(module bundler)</em>。当 webpack 处理应用程序时，它会递归地构建一个<em>依赖关系图(dependency graph)</em>，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个<em>bundle</em>。</p>
+</blockquote>
+<p>简单来说webpack就是一个JavaScript的打包器，将各种模块（module）打包成资源文件；还可以通过 Code Spliting 来把代码分离到不同的 bundle 中，然后可以按需加载或并行加载这些文件；webpack 可以使用 loader 来预处理文件，这允许你打包除了JavaScript 之外的任何静态资源。</p>
+<p><a href="https://www.webpackjs.com/concepts/" target="_blank" rel="noopener">官网</a>首页很清晰的展示了webpack的主要功能：</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>我们可以看到，一堆 modules 经过 webpack 打包处理成了各种静态资源。这就是 webpack</p>
+<h1 id="2-webpack核心概念"><a href="#2-webpack核心概念" class="headerlink" title="2. webpack核心概念"></a>2. webpack核心概念</h1><p>在开始学习 webpack 之前，你需要了解 webpack 的四个核心概念： </p>
+<ul>
+<li>入口（entry）</li>
+<li>出口（output）</li>
+<li>loader</li>
+<li>插件（plugins） </li>
+</ul>
+<h2 id="2-1-入口（entry）"><a href="#2-1-入口（entry）" class="headerlink" title="2.1 入口（entry）"></a>2.1 入口（entry）</h2><p>入口指示 webpack 应该使用哪个模块，来开始构建其内部依赖。进入入口后，webpack 会找出有哪些模块和库是与入口相依赖的。</p>
+<p>我们可以在webpack配置中配置entry属性，来设置一个或多个入口起点。以下是一个简单的entry配置：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: <span class="string">'path/to/your/entry/index.js'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = config</span><br></pre></td></tr></table></figure></p>
+<p>##2.2 出口（output）</p>
+<p> 设置output是为了告诉webpack要在哪里输出其创建的bundle，并且可以对bundle命名。示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: <span class="string">'path/to/your/entry/index.js'</span></span><br><span class="line">  &#125;，  </span><br><span class="line">  output: &#123;</span><br><span class="line">    filename:<span class="string">'[name].bundle.js'</span>,</span><br><span class="line">    path: path.join(__dirname,<span class="string">'./dist'</span>)  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = config</span><br></pre></td></tr></table></figure>
+<p>我们通过 output.filename 来设置输出bundle的文件名， output.path 来设置 bundle 的输出路径 </p>
+<blockquote>
+<p>path 是 nodeJs 中的核心模块，用来处理项目中的路径。</p>
+</blockquote>
+<h2 id="2-3-loader"><a href="#2-3-loader" class="headerlink" title="2.3 loader"></a>2.3 loader</h2><p>由于 webpack 只认识 JavaScript 代码，因此就需要借助其他方法来处理那些非 JavaScript 文件，如 css、image、font等。而 loader 可以将所有类型的文件处理成 webpack 能够识别的有效模块，然后再对其进行处理。</p>
+<p>#####loader 中有两个重要属性：</p>
+<ol>
+<li>test属性，用于标识出应该被对应的 loader 进行转换的某个或某些文件，通常是一个正则表达式；</li>
+<li>use属性，表示进行转换时，应该使用哪个 loader；<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: <span class="string">'path/to/your/entry/index.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'[name].bundle.js'</span>,</span><br><span class="line">    path: path.join(__dirname, <span class="string">'./dist'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    loaders: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.ejs$/</span>,</span><br><span class="line">        use: [<span class="string">'ejs-loader'</span>]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = config</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>以上示例中loader的配置相当于告诉webpack在遇到 .ejs 的文件时，在打包之前先用 ejs-loader 装换一下。</p>
+<p>##2.4 插件（plugins）</p>
+<p>loader 被用于转换某些类型的模块，而插件则可以用于执行范围更广的任务。想要使用一个插件，你只需要require()它，然后把它添加到plugins数组中。多数插件可以通过选项(option)自定义。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>) <span class="comment">// 通过 npm 安装</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: <span class="string">'path/to/your/entry/index.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'[name].bundle.js'</span>,</span><br><span class="line">    path: path.join(__dirname, <span class="string">'./dist'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    loaders: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.ejs$/</span>,</span><br><span class="line">        use: [<span class="string">'ejs-loader'</span>]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">      title: <span class="string">'webpack demo'</span>,</span><br><span class="line">      template: path.join(__dirname, <span class="string">'./index.html'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = config</span><br></pre></td></tr></table></figure></p>
+<p>HtmlWebpackPlugin 将为你生成一个 HTML5 文件， 其中包括使用script标签的 body 中的所有 webpack 包，webpack 提供提供了许多功能强大的插件，查阅<a href="https://www.webpackjs.com/plugins" target="_blank" rel="noopener">插件列表</a>获取更多插件的使用方法。</p>
 
         </div>
         <footer class="article-footer">
@@ -182,7 +211,7 @@
 
 
 
-    <a data-url="http://aventador.top/2019/02/02/hello-world/" data-id="cjrni37l70002kou3u8eqj94o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/" data-id="cjrni37kr0001kou3tucpdl5x" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -252,17 +281,20 @@
             "@type": "Person",
             "name": "葛鹏程"
         },
-        "headline": "Hello World",
-        "image": "http://aventador.top",
+        "headline": "webpack4系列教程（一）：初识webpack",
+        "image": "http://aventador.tophttp://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
         "keywords": "",
-        "genre": "1 2",
+        "genre": "技术文章 webpack",
         "datePublished": "2019-02-02",
         "dateCreated": "2019-02-02",
         "dateModified": "2019-02-02",
-        "url": "http://aventador.top/2019/02/02/hello-world/",
-        "description": "Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick"
-        "wordCount": 144
+        "url": "http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/",
+        "description": "1. 什么是webpack先来看看官网对webpack的介绍 ：
+
+本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。
+
+简单来说webpack就是一个J"
+        "wordCount": 542
     }
 </script>
 
@@ -342,16 +374,12 @@ Quick"
         
 <nav id="article-nav">
     
-        <a href="/2019/02/02/webpack4系列教程（一）：初识webpack/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            webpack4系列教程（一）：初识webpack
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
+        <a href="/2019/02/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Hello World</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -489,7 +517,7 @@ Quick"
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://aventador.top/2019/02/02/hello-world/';
+    var disqus_url = 'http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/';
     
     (function() {
     var dsq = document.createElement('script');
