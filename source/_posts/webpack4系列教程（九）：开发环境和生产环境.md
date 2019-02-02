@@ -1,10 +1,11 @@
 ---
 title: webpack4系列教程（九）：开发环境和生产环境
+category:
+  - 技术文章
+  - webpack
+abbrlink: 8d0369c8
 date: 2019-02-02 21:26:25
 tags:
-category:
-    - 技术文章
-    - webpack
 ---
 # 1. 构建开发环境
 如果你一直跟随我前面的博文，那么你对webpack的基础知识已经有比较深刻的理解了。之前，我们一直执行着：

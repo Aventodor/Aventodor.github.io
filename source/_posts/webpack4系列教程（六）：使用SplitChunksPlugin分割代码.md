@@ -1,10 +1,11 @@
 ---
 title: webpack4系列教程（六）：使用SplitChunksPlugin分割代码
+category:
+  - 技术文章
+  - webpack
+abbrlink: 2040befe
 date: 2019-02-02 21:23:50
 tags:
-category:
-    - 技术文章
-    - webpack
 ---
 # 1. SplitChunksPlugin的概念
 

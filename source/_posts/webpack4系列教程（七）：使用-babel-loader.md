@@ -1,10 +1,11 @@
 ---
 title: webpack4系列教程（七）：使用 babel-loader
+category:
+  - 技术文章
+  - webpack
+abbrlink: 78d52b07
 date: 2019-02-02 21:24:32
 tags:
-category:
-    - 技术文章
-    - webpack
 ---
 # 1. 什么是Babel
 如今 ES6 语法在开发中已经非常普及，甚至也有许多开发人员用上了 ES7 或 ES8 语法。然而，浏览器对这些高级语法的支持性并不是非常好。因此为了让我们的新语法能在浏览器中都能顺利运行，Babel 应运而生。
