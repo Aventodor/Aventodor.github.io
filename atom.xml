@@ -5,12 +5,12 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://aventador.top/"/>
   <updated>2019-01-29T12:32:34.620Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://aventador.top/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>gpc</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/02/01/hello-world/"/>
-    <id>http://yoursite.com/2019/02/01/hello-world/</id>
+    <link href="http://aventador.top/2019/02/01/hello-world/"/>
+    <id>http://aventador.top/2019/02/01/hello-world/</id>
     <published>2019-02-01T08:05:25.764Z</published>
     <updated>2019-01-29T12:32:34.620Z</updated>
     
