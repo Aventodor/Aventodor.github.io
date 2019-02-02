@@ -18,8 +18,8 @@
   
   <entry>
     <title>webpack4系列教程（九）：开发环境和生产环境</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E4%B9%9D%EF%BC%89%EF%BC%9A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（九）：开发环境和生产环境/</id>
+    <link href="http://aventador.top/posts/8d0369c8.html"/>
+    <id>http://aventador.top/posts/8d0369c8.html</id>
     <published>2019-02-02T13:26:25.000Z</published>
     <updated>2019-02-02T13:26:55.955Z</updated>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>webpack4系列教程（八）：使用Eslint审查代码</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E5%85%AB%EF%BC%89%EF%BC%9A%E4%BD%BF%E7%94%A8Eslint%E5%AE%A1%E6%9F%A5%E4%BB%A3%E7%A0%81/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（八）：使用Eslint审查代码/</id>
+    <link href="http://aventador.top/posts/46ef4800.html"/>
+    <id>http://aventador.top/posts/46ef4800.html</id>
     <published>2019-02-02T13:25:18.000Z</published>
     <updated>2019-02-02T13:26:10.340Z</updated>
     
@@ -68,8 +68,8 @@
   
   <entry>
     <title>webpack4系列教程（七）：使用 babel-loader</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%83%EF%BC%89%EF%BC%9A%E4%BD%BF%E7%94%A8-babel-loader/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（七）：使用-babel-loader/</id>
+    <link href="http://aventador.top/posts/78d52b07.html"/>
+    <id>http://aventador.top/posts/78d52b07.html</id>
     <published>2019-02-02T13:24:32.000Z</published>
     <updated>2019-02-02T13:25:01.444Z</updated>
     
@@ -93,8 +93,8 @@
   
   <entry>
     <title>webpack4系列教程（六）：使用SplitChunksPlugin分割代码</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E5%85%AD%EF%BC%89%EF%BC%9A%E4%BD%BF%E7%94%A8SplitChunksPlugin%E5%88%86%E5%89%B2%E4%BB%A3%E7%A0%81/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（六）：使用SplitChunksPlugin分割代码/</id>
+    <link href="http://aventador.top/posts/2040befe.html"/>
+    <id>http://aventador.top/posts/2040befe.html</id>
     <published>2019-02-02T13:23:50.000Z</published>
     <updated>2019-02-02T13:24:17.481Z</updated>
     
@@ -118,8 +118,8 @@
   
   <entry>
     <title>webpack4系列教程（五）：处理项目中的资源文件（二）</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%94%EF%BC%89%EF%BC%9A%E5%A4%84%E7%90%86%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（五）：处理项目中的资源文件（二）/</id>
+    <link href="http://aventador.top/posts/ff9651be.html"/>
+    <id>http://aventador.top/posts/ff9651be.html</id>
     <published>2019-02-02T13:23:03.000Z</published>
     <updated>2019-02-02T13:23:32.012Z</updated>
     
@@ -143,8 +143,8 @@
   
   <entry>
     <title>webpack4系列教程（四）：处理项目中的资源文件（一）</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E5%9B%9B%EF%BC%89%EF%BC%9A%E5%A4%84%E7%90%86%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（四）：处理项目中的资源文件（一）/</id>
+    <link href="http://aventador.top/posts/35a01c57.html"/>
+    <id>http://aventador.top/posts/35a01c57.html</id>
     <published>2019-02-02T13:22:17.000Z</published>
     <updated>2019-02-02T13:22:45.809Z</updated>
     
@@ -168,8 +168,8 @@
   
   <entry>
     <title>webpack4系列教程（三）：自动生成项目中的HTML文件</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84HTML%E6%96%87%E4%BB%B6/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（三）：自动生成项目中的HTML文件/</id>
+    <link href="http://aventador.top/posts/6ead29be.html"/>
+    <id>http://aventador.top/posts/6ead29be.html</id>
     <published>2019-02-02T13:20:44.000Z</published>
     <updated>2019-02-02T13:21:15.049Z</updated>
     
@@ -193,8 +193,8 @@
   
   <entry>
     <title>webpack4系列教程（二）：创建项目，打包第一个JS文件</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%8C%E6%89%93%E5%8C%85%E7%AC%AC%E4%B8%80%E4%B8%AAJS%E6%96%87%E4%BB%B6/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（二）：创建项目，打包第一个JS文件/</id>
+    <link href="http://aventador.top/posts/31e86db9.html"/>
+    <id>http://aventador.top/posts/31e86db9.html</id>
     <published>2019-02-02T13:19:38.000Z</published>
     <updated>2019-02-02T13:20:21.894Z</updated>
     
@@ -218,8 +218,8 @@
   
   <entry>
     <title>webpack4系列教程（一）：初识webpack</title>
-    <link href="http://aventador.top/2019/02/02/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%88%9D%E8%AF%86webpack/"/>
-    <id>http://aventador.top/2019/02/02/webpack4系列教程（一）：初识webpack/</id>
+    <link href="http://aventador.top/posts/c982193d.html"/>
+    <id>http://aventador.top/posts/c982193d.html</id>
     <published>2019-02-02T13:12:55.000Z</published>
     <updated>2019-02-02T13:18:32.287Z</updated>
     
