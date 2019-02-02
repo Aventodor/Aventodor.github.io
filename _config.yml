@@ -5,17 +5,18 @@
 # Site
 title: 葛鹏程|blog
 subtitle:
-description:
-keywords:
-author: John Doe
-language:
+description: 葛鹏程的博客，web前端开发，h5，javascript，JavaScript
+keywords: 葛鹏程的博客，web前端开发，h5，javascript，JavaScript
+author: 葛鹏程
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://polarstar.tech/
+url: http://aventador.top
 root: /
-permalink: :year/:month/:day/:title/
+#permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/
 permalink_defaults:
 
 # Directory
