@@ -1,11 +1,11 @@
 ---
 title: webpack4系列教程（四）：处理项目中的资源文件（一）
 category:
-  - 技术文章
+  - 学习笔记
   - webpack
 abbrlink: 35a01c57
 date: 2019-02-02 21:22:17
-tags:
+tags: webpack
 ---
 
 #  1\. Loader的使用

@@ -1,11 +1,11 @@
 ---
 title: webpack4系列教程（三）：自动生成项目中的HTML文件
 category:
-  - 技术文章
+  - 学习笔记
   - webpack
 abbrlink: 6ead29be
 date: 2019-02-02 21:20:44
-tags:
+tags: webpack
 ---
 # 1. webpack中的CommonJS和ES Mudule 规范
 

@@ -1,11 +1,11 @@
 ---
 title: webpack4系列教程（二）：创建项目，打包第一个JS文件
 category:
-  - 技术文章
+  - 学习笔记
   - webpack
 abbrlink: 31e86db9
 date: 2019-02-02 21:19:38
-tags:
+tags: webpack
 ---
 # 1. 创建项目
 

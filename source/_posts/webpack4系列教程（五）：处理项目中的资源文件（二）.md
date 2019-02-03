@@ -1,7 +1,7 @@
 ---
 title: webpack4系列教程（五）：处理项目中的资源文件（二）
 category:
-  - 技术文章
+  - 学习笔记
   - webpack
 abbrlink: ff9651be
 date: 2019-02-02 21:23:03

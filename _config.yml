@@ -8,7 +8,8 @@ subtitle:
 description: 葛鹏程的博客，web前端开发，h5，javascript，JavaScript
 keywords: 葛鹏程的博客，web前端开发，h5，javascript，JavaScript
 author: 葛鹏程
-language: zh-CN
+language: zh-Hans
+#language: zh-CN
 timezone:
 
 # URL
@@ -77,7 +78,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hueman
+#theme: hueman
+theme: next
 #RSS订阅
 plugin:
 - hexo-generator-feed

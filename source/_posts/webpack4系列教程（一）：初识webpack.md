@@ -1,11 +1,11 @@
 ---
 title: webpack4系列教程（一）：初识webpack
 category:
-  - 技术文章
+  - 学习笔记
   - webpack
 abbrlink: c982193d
 date: 2019-02-02 21:12:55
-tags:
+tags: webpack
 ---
 # 1. 什么是webpack
 
