@@ -1,916 +1,1014 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
 
-    
 
-    
-    <title>分类：: webpack | 葛鹏程|blog</title>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="description" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="葛鹏程|blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
 <meta name="keywords" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
 <meta property="og:type" content="website">
 <meta property="og:title" content="葛鹏程|blog">
 <meta property="og:url" content="http://aventador.top/categories/学习笔记/webpack/index.html">
 <meta property="og:site_name" content="葛鹏程|blog">
 <meta property="og:description" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="葛鹏程|blog">
 <meta name="twitter:description" content="葛鹏程的博客，web前端开发，h5，javascript，JavaScript">
-    
-
-    
-        <link rel="alternate" href="/atom.xml" title="葛鹏程|blog" type="application/atom+xml">
-    
-
-    
-
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
-
-    <link rel="stylesheet" href="/css/style.css">
-
-    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
-    
-    
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
-    
-    
-    
 
 
-    <script>
-      (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-      })();
-    </script>
-</head>
-</html>
-<body>
-    <div id="wrap">
-        <header id="header">
-    <div id="header-outer" class="outer">
-        <div class="container">
-            <div class="container-inner">
-                <div id="header-title">
-                    <h1 class="logo-wrap">
-                        <a href="/" class="logo"></a>
-                    </h1>
-                    
-                </div>
-                <div id="header-inner" class="nav-container">
-                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
-                    <div class="nav-container-inner">
-                        <ul id="main-nav">
-                            
-                                <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/">主页</a>
-                                </li>
-                            
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/学习笔记/webpack/">webpack</a></li></ul></li></ul>
-                                    
-                                <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
-                                </li>
-                            
-                        </ul>
-                        <nav id="sub-nav">
-                            <div id="search-form-wrap">
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(未命名)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '123456',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
 </script>
-<script src="/js/insight.js"></script>
 
+
+
+  <link rel="canonical" href="http://aventador.top/categories/学习笔记/webpack/">
+
+
+
+
+
+  <title>分类: webpack | 葛鹏程|blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">葛鹏程|blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
     </div>
-</header>
-        <div class="container">
-            <div class="main-body container-inner">
-                <div class="main-body-inner">
-                    <section id="main">
-                        <div class="main-body-header">
-    <h1 class="header">
-    
-    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">webpack</em>
-    </h1>
-</div>
 
-                        <div class="main-body-content">
-                            
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
 
-    
-    
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/posts/8d0369c8.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-2964c9a355cbd06d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（九）：开发环境和生产环境" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/8d0369c8.html">0</span>
-    
-</span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
 
 
-    
-</a>
 
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:26:25.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/8d0369c8.html">webpack4系列教程（九）：开发环境和生产环境</a>
+
+    </div>
+  
+</nav>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  
+  
+  
+  <div class="post-block category">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>webpack<small>分类</small>
         </h1>
-    
+      </div>
 
-        <p class="article-excerpt">
-            1. 构建开发环境如果你一直跟随我前面的博文，那么你对webpack的基础知识已经有比较深刻的理解了。之前，我们一直执行着：1npm run build
-来打包编译输出我们的代码，本文我们来看看如何构建一个开发环境，来使我们的开发变得方便些。
-1.1 webpack-dev-serverwebpack-dev-server是一个简单的小型的web服务器，并且能够实时重载，配置也很简单，首先安装：1
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
+      
         
-        <a href="/posts/46ef4800.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-05a52d6709117b78?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（八）：使用Eslint审查代码" class="thumbnail-image"></span>
-    
-    
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/46ef4800.html">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:25:18.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/46ef4800.html">webpack4系列教程（八）：使用Eslint审查代码</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            前言：本章内容，我们在项目中加入eslint配置，来审查校验代码，这样能够避免一些比较低级的错误。并且在团队协作的时候，保持同一种风格和规范能提高代码的可读性，进而提高我们的工作效率。
-安装：eslint-config-standard 是一种较为成熟通用的代码审查规则，这样就不用我们自己去定义规则了，使用起来非常方便，记住还需要安装一些依赖插件：1npm install --save-dev e
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/posts/78d52b07.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-f737bd10225bc684?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（七）：使用 babel-loader" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/78d52b07.html">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:24:32.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/78d52b07.html">webpack4系列教程（七）：使用 babel-loader</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            1. 什么是Babel如今 ES6 语法在开发中已经非常普及，甚至也有许多开发人员用上了 ES7 或 ES8 语法。然而，浏览器对这些高级语法的支持性并不是非常好。因此为了让我们的新语法能在浏览器中都能顺利运行，Babel 应运而生。Babel是一个JavaScript编译器，能够让我们放心的使用新一代JS语法。比如我们的箭头函数：1() =&gt; console.log('hello babe
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/posts/2040befe.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-8808e64f84a39ee5.gif?imageMogr2/auto-orient/strip)" alt="webpack4系列教程（六）：使用SplitChunksPlugin分割代码" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/2040befe.html">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:23:50.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/2040befe.html">webpack4系列教程（六）：使用SplitChunksPlugin分割代码</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            1. SplitChunksPlugin的概念起初，chunks(代码块)和导入他们中的模块通过webpack内部的父子关系图连接.在webpack3中，通过CommonsChunkPlugin来避免他们之间的依赖重复。而在webpack4中CommonsChunkPlugin被移除，取而代之的是 optimization.splitChunks 和 optimization.runtimeChu
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/posts/ff9651be.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-9020ad076d645408.gif?imageMogr2/auto-orient/strip)" alt="webpack4系列教程（五）：处理项目中的资源文件（二）" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/ff9651be.html">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:23:03.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/ff9651be.html">webpack4系列教程（五）：处理项目中的资源文件（二）</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            1. 在项目中使用 less在 src/assets/ 下新建 common.less ：
-1234body&#123;  background: #fafafa;  padding: 20px;&#125;
- 
-在 main.js 中引入 common.less ：
-1import &apos;./assets/style/common.less&apos;
- 
-安装 less-loader：
-
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/posts/35a01c57.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-519e7c14df6655c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（四）：处理项目中的资源文件（一）" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/35a01c57.html">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:22:17.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/35a01c57.html">webpack4系列教程（四）：处理项目中的资源文件（一）</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            1. Loader的使用之前的博文已经介绍了Loader的概念以及用法，webpack 可以使用 loader 来预处理文件，这允许你打包除 JavaScript 之外的任何静态资源， 甚至允许你直接在 JavaScript 模块中 import CSS文件。
-在 src 目录下新建 components 文件夹，新建 modal 组件：
-
- ​
-编写代码：
-12345678910111213&l
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/posts/6ead29be.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-7e8c6b23486d13a6.gif?imageMogr2/auto-orient/strip)" alt="webpack4系列教程（三）：自动生成项目中的HTML文件" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/6ead29be.html">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:20:44.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/6ead29be.html">webpack4系列教程（三）：自动生成项目中的HTML文件</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            1. webpack中的CommonJS和ES Mudule 规范1.1 CommonJs规范CommonJs规范的出发点：JS没有模块系统、标准库较少、缺乏包管理工具；为了让JS可以在任何地方运行，以达到Java、PHP这些后台语言具备开发大型应用的能力。
-在CommonJs规范中：
-
-一个文件就是一个模块，拥有单独的作用域；
-普通方式定义的变量、函数、对象都属于该模块内；
-通过require来
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/posts/31e86db9.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-731bdbebf2b3af20?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（二）：创建项目，打包第一个JS文件" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/31e86db9.html">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:19:38.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/31e86db9.html">webpack4系列教程（二）：创建项目，打包第一个JS文件</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            1. 创建项目1.1 初始化一个项目首先安装nodejs，打开 nodeJs官网 直接下载安装即可，安装完毕后打开命令行工具，进入你的项目文件夹，执行
-npm init 进行项目的初始化：
-
-过程中会让你填写项目名、版本、描述、仓库地址、关键字等信息，可以不填一路回车，执行完毕后会在根目录下创建一个 package.json 文件，这样就初始化结束了。
-1.2 安装webpack由于在webpac
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/posts/c982193d.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-6beaaa872608b868?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（一）：初识webpack" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://aventador.top/posts/c982193d.html">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a>
-            </div>
-            <div class="date"><time datetime="2019-02-02T13:12:55.000Z" itemprop="datePublished">2019-02-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/posts/c982193d.html">webpack4系列教程（一）：初识webpack</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            1. 什么是webpack先来看看官网对webpack的介绍 ：
-
-本质上，webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。
-
-简单来说webpack就是一个J
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
-
-
-
-                        </div>
-                    </section>
-                    <aside id="sidebar">
-    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    <div class="sidebar-top">
-        <p>关注我 :</p>
-        <ul class="social-links">
-            
-                
-                <li>
-                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-facebook"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="google-plus" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-google-plus"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
-                        <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-weibo"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
-                        <i class="icon fa fa-rss"></i>
-                    </a>
-                </li>
-                
-            
-        </ul>
-    </div>
-    
-    <div class="widgets-container">
-        
-            
-                
-
-            
-                
-    <div class="widget-wrap">
-        <h3 class="widget-title">最新文章</h3>
-        <div class="widget">
-            <ul id="recent-post" class="">
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/posts/8d0369c8.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-2964c9a355cbd06d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（九）：开发环境和生产环境" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a></p>
-                            <p class="item-title"><a href="/posts/8d0369c8.html" class="title">webpack4系列教程（九）：开发环境和生产环境</a></p>
-                            <p class="item-date"><time datetime="2019-02-02T13:26:25.000Z" itemprop="datePublished">2019-02-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/posts/46ef4800.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-05a52d6709117b78?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（八）：使用Eslint审查代码" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a></p>
-                            <p class="item-title"><a href="/posts/46ef4800.html" class="title">webpack4系列教程（八）：使用Eslint审查代码</a></p>
-                            <p class="item-date"><time datetime="2019-02-02T13:25:18.000Z" itemprop="datePublished">2019-02-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/posts/78d52b07.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://upload-images.jianshu.io/upload_images/2012934-f737bd10225bc684?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)" alt="webpack4系列教程（七）：使用 babel-loader" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a></p>
-                            <p class="item-title"><a href="/posts/78d52b07.html" class="title">webpack4系列教程（七）：使用 babel-loader</a></p>
-                            <p class="item-date"><time datetime="2019-02-02T13:24:32.000Z" itemprop="datePublished">2019-02-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/posts/2040befe.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-8808e64f84a39ee5.gif?imageMogr2/auto-orient/strip)" alt="webpack4系列教程（六）：使用SplitChunksPlugin分割代码" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a></p>
-                            <p class="item-title"><a href="/posts/2040befe.html" class="title">webpack4系列教程（六）：使用SplitChunksPlugin分割代码</a></p>
-                            <p class="item-date"><time datetime="2019-02-02T13:23:50.000Z" itemprop="datePublished">2019-02-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/posts/ff9651be.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://upload-images.jianshu.io/upload_images/2012934-9020ad076d645408.gif?imageMogr2/auto-orient/strip)" alt="webpack4系列教程（五）：处理项目中的资源文件（二）" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/学习笔记/">学习笔记</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/学习笔记/webpack/">webpack</a></p>
-                            <p class="item-title"><a href="/posts/ff9651be.html" class="title">webpack4系列教程（五）：处理项目中的资源文件（二）</a></p>
-                            <p class="item-date"><time datetime="2019-02-02T13:23:03.000Z" itemprop="datePublished">2019-02-02</time></p>
-                        </div>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">分类</h3>
-        <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/webpack/">webpack</a><span class="category-list-count">9</span></li></ul></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">归档</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">9</span></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-
-            
-                
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">链接</h3>
-        <div class="widget">
-            <ul>
-                
-                    <li>
-                        <a href="http://hexo.io">Hexo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-
-            
-        
-    </div>
-</aside>
-
-                </div>
-            </div>
-        </div>
-        <footer id="footer">
-    <div class="container">
-        <div class="container-inner">
-            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-            <div class="credit">
-                <h1 class="logo-wrap">
-                    <a href="/" class="logo"></a>
-                </h1>
-                <p>&copy; 2019 葛鹏程</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-            </div>
-            <div class="footer-plugins">
+            <a class="post-title-link" href="/posts/8d0369c8.html" itemprop="url">
               
-    
+                <span itemprop="name">webpack4系列教程（九）：开发环境和生产环境</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:26:25+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
 
 
-            </div>
-        </div>
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/posts/46ef4800.html" itemprop="url">
+              
+                <span itemprop="name">webpack4系列教程（八）：使用Eslint审查代码</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:25:18+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/posts/78d52b07.html" itemprop="url">
+              
+                <span itemprop="name">webpack4系列教程（七）：使用 babel-loader</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:24:32+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/posts/2040befe.html" itemprop="url">
+              
+                <span itemprop="name">webpack4系列教程（六）：使用SplitChunksPlugin分割代码</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:23:50+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/posts/ff9651be.html" itemprop="url">
+              
+                <span itemprop="name">webpack4系列教程（五）：处理项目中的资源文件（二）</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:23:03+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/posts/35a01c57.html" itemprop="url">
+              
+                <span itemprop="name">webpack4系列教程（四）：处理项目中的资源文件（一）</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:22:17+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/posts/6ead29be.html" itemprop="url">
+              
+                <span itemprop="name">webpack4系列教程（三）：自动生成项目中的HTML文件</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:20:44+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/posts/31e86db9.html" itemprop="url">
+              
+                <span itemprop="name">webpack4系列教程（二）：创建项目，打包第一个JS文件</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:19:38+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/posts/c982193d.html" itemprop="url">
+              
+                <span itemprop="name">webpack4系列教程（一）：初识webpack</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-02T21:12:55+08:00" content="2019-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
     </div>
-</footer>
+
+  </div>
+  
+  
+  
+
+  
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/my-logo.jpeg" alt="葛鹏程">
+            
+              <p class="site-author-name" itemprop="name">葛鹏程</p>
+              <p class="site-description motion-element" itemprop="description">葛鹏程的博客，web前端开发，h5，javascript，JavaScript</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://segmentfault.com/u/legion_5c358d9eefe0c" target="_blank" title="思否">
+                      
+                        <i class="fa fa-fw fa-globe"></i>思否</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/b26c47705c4a" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-globe"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Aventodor" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.npmjs.com/" title="npm" target="_blank">npm</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/" title="segmentfault" target="_blank">segmentfault</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
 
         
-    
-    <script>
-    var disqus_shortname = 'hexo-theme-hueman';
-    
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">葛鹏程</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
 
-    
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
-    
-    
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
-    
-    
+        
 
 
 
-<!-- Custom Scripts -->
-<script src="/js/main.js"></script>
 
-    </div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("zbKF4O6nXoYWSh22l5N5cWlc-gzGzoHsz", "vMt3QcjtyUGExIcefpxtsgTf");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
