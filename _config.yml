@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 葛鹏程|blog
+title: 前端小酱|blog
 subtitle:
 description: 哈哈哈哈哈
-keywords: 葛鹏程的博客，web前端开发，h5，javascript，JavaScript
-author: 葛鹏程
+keywords: 前端小酱的博客，web前端开发，h5，javascript，JavaScript
+author: 前端小酱
 language: zh-Hans
 #language: zh-CN
 timezone:
@@ -48,7 +48,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -57,7 +57,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
